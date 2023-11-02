@@ -1,0 +1,28 @@
+
+<div id="class">
+    <div id="heading">
+        <h1>Our classes</h1>
+    <p>Let us help you find a class that meets your fitness goals.</p>
+
+    </div>
+    
+    {{#each classes}}
+  <div class="class-card">
+    <img height="200px" width="300px" src="{{this.imageName}}" alt="{{this.name}} Image">
+    <div id="info">
+ <h2>{{this.name}}</h2>
+    <p>{{this.length}} minutes</p>
+    <p>Price: ${{formatPrice this.length}}</p>
+
+   
+      <form action="/book-class/{{this._id}}" method="post">
+      <input type="hidden" name="classId" id="{{this._id}}" value="{{this._id}}">
+        <button method="submit">Book Now</button>
+      </form>
+    </div>
+   
+
+  </div>
+{{/each}}
+</div>
+

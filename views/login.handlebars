@@ -1,0 +1,23 @@
+{{!-- Login --}}
+{{! Add a form for user login }}
+<div id="login">
+    <div id="bgImage">
+<img src="https://wallpaperaccess.com/full/1244994.jpg" height="790px" width="100%">
+    </div>
+    
+<div id="form">
+<h1>LOGIN OR SIGN UP</h1>
+    <form action="/auth" method="post">
+        <label for="username"></label>
+        <input type="text" id="username" placeholder="Enter username" name="username" required>
+        <br>
+        <label for="password"></label>
+        <input type="password" id="password" placeholder="Enter password" name="password" required>
+        <br>
+        <button id="loginButton" type="submit" name="submit" value="login">Login</button>
+        <button id="signUpButton" type="submit" name="submit" value="create-account">Create Account</button>
+    </form>
+
+</div>
+</div>
+
